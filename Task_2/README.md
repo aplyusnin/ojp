@@ -11,4 +11,6 @@ Java class generation with ASM OW2
 Результатом выыполнения является __GuessNumber.class__
 
 Запуск 
+
     java -cp . GuessNumber
+ 
