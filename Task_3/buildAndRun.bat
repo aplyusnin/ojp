@@ -1,0 +1,1 @@
+gradle build  && java -javaagent:build/libs/Task_3-1.0-SNAPSHOT.jar TransactionProcessor.java
