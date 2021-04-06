@@ -10,36 +10,10 @@ import java.util.List;
 
 public class Main {
 
-	public static void hui(){
-		System.out.print("HUI");
-	}
-
-
-	public static class Ahahah{
-		public Ahahah(){
-
-		}
-
-		void eblan(){
-			hui();
-		}
-
-	}
 
 	public static void main(String[] args) throws Exception
 	{
 		Parser parser = new LispParser(args[0]);
-
-		HashMap<Object, Object> vars = new HashMap<>();
-
-		Object a = new Object(), b = new Object(), c = new Object();
-
-		vars.put(a, b);
-		vars.put(a, c);
-
-		Ahahah ahahah = new Ahahah();
-		ahahah.eblan();
-
 
 		List<Node> nodeList = parser.parse();
 
