@@ -1,10 +1,10 @@
-package ru.nsu.fit.javalisp.translator.handlers;
+package ru.nsu.fit.ojp.Task_4.translator.handlers;
 
-import ru.nsu.fit.javalisp.Node;
-import ru.nsu.fit.javalisp.Pair;
-import ru.nsu.fit.javalisp.translator.Context;
-import ru.nsu.fit.javalisp.translator.FunctionDescriptor;
-import ru.nsu.fit.javalisp.translator.JavaInvoker;
+import ru.nsu.fit.ojp.Task_4.Node;
+import ru.nsu.fit.ojp.Task_4.Pair;
+import ru.nsu.fit.ojp.Task_4.translator.Context;
+import ru.nsu.fit.ojp.Task_4.translator.FunctionDescriptor;
+import ru.nsu.fit.ojp.Task_4.translator.JavaInvoker;
 
 import java.util.ArrayList;
 import java.util.HashMap;

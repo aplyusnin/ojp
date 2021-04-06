@@ -1,4 +1,4 @@
-package ru.nsu.fit.javalisp.translator;
+package ru.nsu.fit.ojp.Task_4.translator;
 
 import java.util.HashMap;
 

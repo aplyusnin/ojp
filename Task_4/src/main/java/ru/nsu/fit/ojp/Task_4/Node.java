@@ -1,4 +1,4 @@
-package ru.nsu.fit.javalisp;
+package ru.nsu.fit.ojp.Task_4;
 
 import java.util.LinkedList;
 import java.util.List;

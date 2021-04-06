@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'application'
 }
 
 group 'org.example'
@@ -13,7 +12,7 @@ repositories {
 jar {
 
     manifest{
-        attributes "Main-Class" : 'java/ru/nsu/fit/javalisp/Main'
+        attributes 'Main-Class' : 'ru/nsu/fit/ojp/Task_4/Main'
     }
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }

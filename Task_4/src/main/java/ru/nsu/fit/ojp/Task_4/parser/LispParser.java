@@ -1,6 +1,6 @@
-package ru.nsu.fit.javalisp.parser;
+package ru.nsu.fit.ojp.Task_4.parser;
 
-import ru.nsu.fit.javalisp.Node;
+import ru.nsu.fit.ojp.Task_4.Node;
 
 import java.io.File;
 import java.io.FileReader;

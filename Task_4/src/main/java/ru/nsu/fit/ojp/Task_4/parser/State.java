@@ -1,6 +1,6 @@
-package ru.nsu.fit.javalisp.parser;
+package ru.nsu.fit.ojp.Task_4.parser;
 
-import ru.nsu.fit.javalisp.Pair;
+import ru.nsu.fit.ojp.Task_4.Pair;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

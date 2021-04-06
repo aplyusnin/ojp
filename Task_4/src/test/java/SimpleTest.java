@@ -1,8 +1,8 @@
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import ru.nsu.fit.javalisp.parser.LispParser;
-import ru.nsu.fit.javalisp.translator.LispTransformer;
+import ru.nsu.fit.ojp.Task_4.parser.LispParser;
+import ru.nsu.fit.ojp.Task_4.translator.LispTransformer;
 
 import java.lang.reflect.Method;
 

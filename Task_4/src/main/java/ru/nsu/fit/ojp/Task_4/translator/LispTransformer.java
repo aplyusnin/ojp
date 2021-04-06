@@ -1,9 +1,9 @@
-package ru.nsu.fit.javalisp.translator;
+package ru.nsu.fit.ojp.Task_4.translator;
 
 import javassist.*;
-import ru.nsu.fit.javalisp.Node;
-import ru.nsu.fit.javalisp.Pair;
-import ru.nsu.fit.javalisp.translator.handlers.*;
+import ru.nsu.fit.ojp.Task_4.Node;
+import ru.nsu.fit.ojp.Task_4.Pair;
+import ru.nsu.fit.ojp.Task_4.translator.handlers.*;
 
 import java.util.*;
 
@@ -64,12 +64,12 @@ public class LispTransformer {
 
 
 		LeafHandler leafHandler = new LeafHandler  (contexts, nameToDesc, nameToDummy);
-		ApplyJHandler  jHandler = new ApplyJHandler(contexts, nameToDesc, nameToDummy);
-		ApplyFHandler  fHandler = new ApplyFHandler(contexts, nameToDesc, nameToDummy);
+		ApplyJHandler jHandler = new ApplyJHandler(contexts, nameToDesc, nameToDummy);
+		ApplyFHandler fHandler = new ApplyFHandler(contexts, nameToDesc, nameToDummy);
 		IfHandler     ifHandler = new IfHandler    (contexts, nameToDesc, nameToDummy);
 		WrapHandler wrapHandler = new WrapHandler  (contexts, nameToDesc, nameToDummy);
 		LetHandler   letHandler = new LetHandler   (contexts, nameToDesc, nameToDummy);
-		ApplyVHandler  vHandler = new ApplyVHandler(contexts, nameToDesc, nameToDummy);
+		ApplyVHandler vHandler = new ApplyVHandler(contexts, nameToDesc, nameToDummy);
 		DoHandler  doHandler = new DoHandler(contexts, nameToDesc, nameToDummy);
 		ApplyLHandler lHandler = new ApplyLHandler(contexts, nameToDesc, nameToDummy);
 
@@ -436,7 +436,7 @@ public class LispTransformer {
 	{
 		try
 		{
-			CtClass cc = pool.get("ru.nsu.fit.javalisp.translator.Source");
+			CtClass cc = pool.get("ru.nsu.fit.ojp.Task_4.translator.Source");
 			cc.setName("LispSource");
 
 			lMain = CtNewMethod.make("public void evaluate() throws Exception {\n}", cc);
