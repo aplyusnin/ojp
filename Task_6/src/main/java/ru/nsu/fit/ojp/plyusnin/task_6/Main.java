@@ -6,7 +6,7 @@ public class Main {
 		var t = MyJNIClass.getCpuInfo();
 
 		for (var x : t.entrySet()){
-			System.out.print(x.getKey() + " : " + x.getValue());
+			System.out.println(x.getKey() + " : " + x.getValue() + "\n");
 		}
 	}
 }

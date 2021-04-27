@@ -2,7 +2,6 @@
 #include <jni.h>
 #include <fstream>
 #include <string>
-#include <algorithm>
 
 
 extern "C"{
@@ -19,11 +18,12 @@ extern "C"{
 	
 	    _jobject* cur = env->NewObject(cls, init);
 	    if (cur == nullptr) return nullptr;
-	    _jmethodID* put = env->GetMethodID(cls, "put", "(Ljava/lang/Object;Ljava/lang/String)Ljava/lang/String");
+	    _jmethodID* put = env->GetMethodID(cls, "put", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;");
 	    std::string line;
 	    while (getline(in, line)){
 		    int p;
-		    for (p = 0; line[p] != ':'; p++);
+		    for (p = 0; p < (int)line.size() && line[p] != ':'; p++);
+		    if (p + 1 > (int)line.size()) continue;
 	    	std::string key = line.substr(0, p);
     		std::string val = line.substr(p + 1, (int)line.size() - p - 1);
 		    _jstring* jkey = env->NewStringUTF(key.c_str());
