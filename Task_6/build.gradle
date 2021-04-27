@@ -19,7 +19,7 @@ dependencies {
 mainClassName = 'ru.nsu.fit.ojp.plyusnin.task_6.Main'
 
 run {
-    systemProperty "java.library.path", file("${buildDir}/libs/cpu").absolutePath
+    systemProperty "java.library.path", file("${buildDir}/libs/cpuinfo/shared/x64").absolutePath
 }
 
 model{
@@ -36,7 +36,7 @@ model{
     }
 
     components{
-        cpu(NativeLibrarySpec){
+        cpuinfo(NativeLibrarySpec){
             targetPlatform "x64"
 
 
@@ -49,4 +49,16 @@ model{
         }
     }
 }
-run.dependsOn 'cpu'
+jar {
+    manifest {
+        attributes(
+                'Main-Class': mainClassName
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+jar.dependsOn 'cpuinfoX64SharedLibrary'
+run.dependsOn 'cpuinfoX64SharedLibrary'

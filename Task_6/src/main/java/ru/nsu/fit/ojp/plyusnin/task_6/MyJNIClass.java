@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class MyJNIClass {
 	static {
-		System.loadLibrary("cpu");
+		System.loadLibrary("cpuinfo");
 	}
 
 	static native Map<String,String> getCpuInfo();
