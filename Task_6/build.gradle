@@ -49,4 +49,4 @@ model{
         }
     }
 }
-run.dependsOn 'cpuX64SharedLibrary'
+run.dependsOn 'cpu'
