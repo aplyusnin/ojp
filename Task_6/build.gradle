@@ -1,6 +1,9 @@
+import org.gradle.internal.jvm.Jvm
+
 plugins {
     id 'java'
     id 'application'
+    id 'cpp'
 }
 
 group 'org.example'
@@ -14,3 +17,36 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 mainClassName = 'ru.nsu.fit.ojp.plyusnin.task_6.Main'
+
+run {
+    systemProperty "java.library.path", file("${buildDir}/libs/cpu").absolutePath
+}
+
+model{
+    toolChains{
+        gcc(Gcc){
+            target("x64") {}
+        }
+    }
+
+    platforms {
+        x64 {
+            architecture "x64"
+        }
+    }
+
+    components{
+        cpu(NativeLibrarySpec){
+            targetPlatform "x64"
+
+
+            binaries.all{
+                if (targetPlatform.operatingSystem.linux){
+                    cppCompiler.args '-I', "${Jvm.current().javaHome}/include"
+                    cppCompiler.args '-I', "${Jvm.current().javaHome}/include/linux"
+                }
+            }
+        }
+    }
+}
+run.dependsOn 'cpuX64SharedLibrary'
