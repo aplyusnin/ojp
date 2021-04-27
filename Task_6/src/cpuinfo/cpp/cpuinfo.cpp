@@ -17,7 +17,7 @@ extern "C"{
     	_jmethodID *init = env->GetMethodID(cls, "<init>", "()V");
     	if (init == nullptr) return nullptr;
 	
-	    _jobject* cur = env->ТewObject(cls, init);
+	    _jobject* cur = env->NewObject(cls, init);
 	    if (cur == nullptr) return nullptr;
 	    _jmethodID* put = env->GetMethodID(cls, "put", "(Ljava/lang/Object;Ljava/lang/String)Ljava/lang/String");
 	    std::string line;
