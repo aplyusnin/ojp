@@ -19,7 +19,7 @@ dependencies {
 mainClassName = 'ru.nsu.fit.ojp.plyusnin.task_6.Main'
 
 run {
-    systemProperty "java.library.path", file("${buildDir}/libs/cpuinfo/shared/x64").absolutePath
+    systemProperty "java.library.path", file("${buildDir}/libs/cpuinfo/shared").absolutePath
 }
 
 model{
@@ -60,5 +60,5 @@ jar {
     }
 }
 
-jar.dependsOn 'cpuinfoX64SharedLibrary'
-run.dependsOn 'cpuinfoX64SharedLibrary'
+jar.dependsOn 'cpuinfoSharedLibrary'
+run.dependsOn 'cpuinfoSharedLibrary'
