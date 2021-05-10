@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id "me.champeau.jmh" version "0.6.4"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-core
+    implementation group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.30'
+// https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-generator-annprocess
+    testImplementation group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.30'
+
+}
