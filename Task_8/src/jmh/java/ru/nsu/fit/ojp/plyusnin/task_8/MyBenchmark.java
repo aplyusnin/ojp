@@ -6,13 +6,13 @@ import java.util.concurrent.TimeUnit;
 
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-@Warmup(iterations = 3, time = 7)
-@Measurement(iterations = 10)
-@Threads(2)
+@Warmup(iterations = 3, time = 3)
+@Measurement(iterations = 5)
+@Threads(1)
 @State(Scope.Benchmark)
 public class MyBenchmark {
 
-	@Param({"123", "12431234512345", "1274598123579382715", "135679238489a23197582", "1274982174912a", "defiantly not a text"})
+	@Param({"12432345","12431234512345", "135679238489a23197582", "definitely not a number"})
 	public String arg;
 
 
